@@ -38,8 +38,7 @@ zeek fping fpdns
 RUN wget "https://raw.githubusercontent.com/qashqao/acccheck/master/acccheck.pl" && chmod +x acccheck.pl && \
 mv acccheck.pl /usr/bin/acccheck
 # Install linux-smart-enumeration from github
-RUN wget "https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh" -O lse.sh
-RUN chmod +x lse.sh
-RUN mv lse.sh /usr/bin/lse  
+RUN wget "https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh" && \
+chmod +x lse.sh && mv lse.sh /usr/bin/lse  
 # Set root's .bashrc to the skel's default
 RUN cp -f /etc/skel/.bashrc /root/.bashrc
