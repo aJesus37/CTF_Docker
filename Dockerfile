@@ -13,6 +13,11 @@ EXPOSE 1340/tcp
 WORKDIR /root
 # Set default shell for docker build
 SHELL ["/bin/bash", "-c"]
+# Adds zeek's repositories to SO
+RUN echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_9.0/ /' > \
+/etc/apt/sources.list.d/security:zeek.list && \
+wget -nv https://download.opensuse.org/repositories/security:zeek/Debian_9.0/Release.key \
+-O Release.key && apt-key add - < Release.key
 # Update packages on OS
 RUN apt update && apt dist-upgrade -yqq
 # Enable wireshark to be installed non-interactively
@@ -26,6 +31,6 @@ wpscan rarcrack crunch mimikatz hash-identifier hashcat \
 hashcat-utils passing-the-hash hashid wordlists set snmpcheck \
 exploitdb dnschef tshark powersploit binwalk yara dnstracer \
 tcpdump windows-privesc-check 0trace p0f gobuster iputils-ping \
-tmux vim openvpn man tftp
+zeek
 # Set root's .bashrc to the skel's default
 RUN cp -f /etc/skel/.bashrc /root/.bashrc
