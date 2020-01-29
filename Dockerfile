@@ -31,6 +31,8 @@ wpscan rarcrack crunch mimikatz hash-identifier hashcat \
 hashcat-utils passing-the-hash hashid wordlists set snmpcheck \
 exploitdb dnschef tshark powersploit binwalk yara dnstracer \
 tcpdump windows-privesc-check 0trace p0f gobuster iputils-ping \
+tmux vim openvpn man tftp ftp snmp bash-completion perl-tk \
+libterm-readkey-perl wfuzz sshfs exiftool steghide pngcheck \
 zeek
 # Set root's .bashrc to the skel's default
 RUN cp -f /etc/skel/.bashrc /root/.bashrc
