@@ -34,6 +34,9 @@ tcpdump windows-privesc-check 0trace p0f gobuster iputils-ping \
 tmux vim openvpn man tftp ftp snmp bash-completion perl-tk \
 libterm-readkey-perl wfuzz sshfs exiftool steghide pngcheck \
 zeek fping fpdns
+# Install acccheck from github
+RUN wget "https://raw.githubusercontent.com/qashqao/acccheck/master/acccheck.pl" && chmod +x acccheck.pl && \
+mv acccheck.pl /usr/bin/acccheck
 # Install linux-smart-enumeration from github
 RUN wget "https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeration/master/lse.sh" -O lse.sh
 RUN chmod +x lse.sh
