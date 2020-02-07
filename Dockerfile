@@ -23,7 +23,7 @@ RUN apt update && apt dist-upgrade -yqq
 # Enable wireshark to be installed non-interactively
 RUN echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
 # Install hacking tools from kali meta-packages and repos
-RUN apt install -yqq kali-tools-headless 0trace hping3 \
+RUN apt update && apt install -yqq kali-tools-headless 0trace hping3 \
 masscan dnsenum dnsmap nbtscan dnsrecon theharvester  \
 ncat dnswalk enum4linux fierce onesixtyone recon-ng smbmap \
 smtp-user-enum nikto openvas dirb dotdotpwn proxychains \
