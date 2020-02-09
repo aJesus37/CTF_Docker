@@ -28,7 +28,7 @@ exploitdb dnschef tshark powersploit binwalk yara dnstracer \
 tcpdump windows-privesc-check 0trace p0f gobuster iputils-ping \
 tmux vim openvpn man tftp ftp bash-completion perl-tk \
 libterm-readkey-perl wfuzz sshfs exiftool steghide pngcheck \
-fping fpdns curl wget ansible
+fping fpdns curl wget ansible gron python-pip
 # Adds zeek's repositories to SO
 RUN echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_9.0/ /' > \
 /etc/apt/sources.list.d/security:zeek.list && \
