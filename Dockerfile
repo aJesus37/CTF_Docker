@@ -42,3 +42,5 @@ RUN wget "https://raw.githubusercontent.com/diego-treitos/linux-smart-enumeratio
 chmod +x lse.sh && mv lse.sh /usr/bin/lse  
 # Set root's .bashrc to the skel's default
 RUN cp -f /etc/skel/.bashrc /root/.bashrc
+# Install NSE Script for nmap
+RUN git clone https://github.com/scipag/vulscan scipag_vulscan && mv scipag_vulscan /usr/share/nmap/scripts/vulscan
