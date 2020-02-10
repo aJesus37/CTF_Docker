@@ -13,6 +13,9 @@ EXPOSE 1340/tcp
 WORKDIR /root
 # Set default shell for docker build
 SHELL ["/bin/bash", "-c"]
+# Set correct Timezone (For me :D)
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 # Update packages on OS
 RUN apt update && apt dist-upgrade -yqq
 # Enable wireshark to be installed non-interactively
