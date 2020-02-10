@@ -46,4 +46,4 @@ RUN cp -f /etc/skel/.bashrc /root/.bashrc
 RUN git clone https://github.com/scipag/vulscan scipag_vulscan && mv scipag_vulscan /usr/share/nmap/scripts/vulscan
 # Install evtx2json from github
 RUN git clone https://github.com/aJesus37/evtx2json && cd evtx2json && pip install -r requirements.txt && \
-mv evtx2json.py /usr/bin/evtx2json
+mv evtx2json.py /usr/bin/evtx2json && rm -rf /root/evtx2json && rm -rf /root/.cache/
