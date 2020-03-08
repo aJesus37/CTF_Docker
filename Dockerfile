@@ -13,11 +13,6 @@ FROM registry.gitlab.com/kalilinux/build-scripts/kali-docker/kali-rolling
 MAINTAINER aJesus37
 # Supresses some warnings during package update/install phase
 ENV DEBIAN_FRONTEND noninteractive
-# Make ports available to be published on runtime
-EXPOSE 1337/tcp
-EXPOSE 1338/tcp
-EXPOSE 1339/tcp
-EXPOSE 1340/tcp
 # Set the workdir to the root's home
 WORKDIR /root
 # Set default shell for docker build
