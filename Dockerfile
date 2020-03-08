@@ -1,3 +1,12 @@
+# sudo docker run --device="/dev/dri/card0" \
+# --volume="/etc/machine-id:/etc/machine-id:ro" \
+# --volume="/usr/share/X11/xkb:/usr/share/X11/xkb/:ro" \
+# --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+# --volume="/tmp/.X11-unix/:/tmp/.X11-unix" --net=host -dit \
+# --name kali --hostname kali kali_latest /bin/bash
+
+### The above way of running let's you use GUI applications such as bloodhound and others
+
 # Gets latest release of kali rolling from their repo
 FROM registry.gitlab.com/kalilinux/build-scripts/kali-docker/kali-rolling
 # Maintainer nick
