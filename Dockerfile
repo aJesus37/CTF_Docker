@@ -64,3 +64,5 @@ mv evtx2json.py /usr/bin/evtx2json && rm -rf /root/evtx2json && rm -rf /root/.ca
 RUN ansible-galaxy role install ajesus37.ctf_role --force
 # Install evil-winrm on the system
 RUN gem install evil-winrm
+# Set container command to /bin/bash
+CMD ["/bin/bash"]
