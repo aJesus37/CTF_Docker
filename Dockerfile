@@ -37,6 +37,10 @@ tmux vim openvpn man tftp ftp bash-completion perl-tk \
 libterm-readkey-perl wfuzz sshfs exiftool steghide pngcheck \
 fping fpdns curl wget ansible gron python-pip dirbuster jq \
 bloodhound firefox-esr
+#Download and install burpsuite, jar version since the repo's doesn't work here'
+RUN wget -nv "https://portswigger.net/burp/releases/download?product=community&version=2020.4.1&type=Jar" \
+-O burp.jar && mv burp.jar /usr/bin/burp.jar && echo -e '#!/bin/bash\njava -jar /usr/bin/burp.jar' \
+>> /usr/bin/burpsuite && chmod +x /usr/bin/burpsuite
 # Adds zeek's repositories to SO
 RUN echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_9.0/ /' > \
 /etc/apt/sources.list.d/security:zeek.list && \
