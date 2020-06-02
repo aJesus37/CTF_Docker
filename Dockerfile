@@ -45,7 +45,7 @@ RUN wget -nv "https://portswigger.net/burp/releases/download?product=community&v
 RUN echo 'deb http://download.opensuse.org/repositories/security:/zeek/Debian_9.0/ /' > \
 /etc/apt/sources.list.d/security:zeek.list && \
 wget -nv https://download.opensuse.org/repositories/security:zeek/Debian_9.0/Release.key \
--O Release.key && apt-key add - < Release.key && apt update && apt install zeek -yqq && rm Release.key
+-O Release.key && apt-key add - < Release.key && apt update && apt install zeek-lts -yqq && rm Release.key && \
 # Install acccheck from github
 RUN wget "https://raw.githubusercontent.com/qashqao/acccheck/master/acccheck.pl" && chmod +x acccheck.pl && \
 mv acccheck.pl /usr/bin/acccheck
