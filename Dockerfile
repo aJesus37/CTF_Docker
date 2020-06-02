@@ -10,7 +10,7 @@
 # Gets latest release of kali rolling from their repo
 FROM registry.gitlab.com/kalilinux/build-scripts/kali-docker/kali-rolling
 # Maintainer nick
-MAINTAINER aJesus37
+LABEL maintainer="aJesus37 ajesus37@protonmail.com"
 # Supresses some warnings during package update/install phase
 ENV DEBIAN_FRONTEND noninteractive
 # Set the workdir to the root's home
